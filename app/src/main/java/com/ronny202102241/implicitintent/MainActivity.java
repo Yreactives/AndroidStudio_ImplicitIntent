@@ -59,11 +59,13 @@ public class MainActivity extends AppCompatActivity {
 
     public void tampilGoogleDrive(View view){
         try{
-            Intent calculatorIntent = new Intent(Intent.ACTION_MAIN);
-            calculatorIntent.addCategory(Intent.CATEGORY_LAUNCHER);
+            Intent driveGoogle = new Intent(Intent.ACTION_MAIN);
+            driveGoogle.addCategory(Intent.CATEGORY_LAUNCHER);
             ComponentName cn = new ComponentName("com.google.android.apps.docs", "com.google.android.apps.docs.app.NewMainProxyActivity");
-            calculatorIntent.setComponent(cn);
-            startActivity(calculatorIntent);
+            driveGoogle.setComponent(cn);
+            startActivity(driveGoogle);
+
+
         }
         catch (ActivityNotFoundException anfe){
             Toast.makeText(getApplicationContext(), "Aplikasi Tidak Ditemukan", Toast.LENGTH_LONG).show();
